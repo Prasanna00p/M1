@@ -1,31 +1,31 @@
 
 # EX-01-Datatypes-Operators
 ## AIM:
-Write a C program to read 3 characters one by one and print the characters in a reverse order.
-
-## ALGORITHM:
-1.	Declare three character variables to store the input characters.
-2.	Use the scanf function to read the characters one by one from the user.
-3.	Print the characters in reverse order using the printf function.
-4.	End the program.
-
-## PROGRAM:
+Write a C program to initialize the character as z & display the same character.-----
 
 ## OUTPUT:
 
+## ALGORITHM:
+1.Start the program.
 
+2.Declare a character variable and initialize it to 'z'.
 
+3.Display the character using printf().
 
+End the program.
+## PROGRAM:
+```
+#include <stdio.h>
+int main()
+{
+char a ='z';
+printf("%c",a);
+}
 
+```
+# OUTPUT:
 
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/994f6242-e071-4abe-abf1-03ee417fb8cd)
 
 
 
@@ -35,28 +35,39 @@ Thus the program to read 3 characters one by one and print the characters in a r
 
 # EX-02- Conditional-Statements
 ## AIM:
-Write a C program to read A values and check whether A is positive number or not.
+Write a C Program to print numbers(10 to 14) into words using the switch statement (EX. 10 -TEN, 13-THIRTEEN)
 
 # ALGORITHM:
-1.	Declare a variable to store the input value A.
-2.	Use the scanf function to read the value of A from the user.
-3.	Check if the value of A is greater than zero.
-4.	If A is greater than zero, print a message indicating that it's a positive number. 
-5.	Otherwise, print a message indicating that it's not a positive number.
-6.End the program.
+1.Start the program and declare an integer variable.
+
+2.Read or assign a number between 10 and 14.
+
+3.Use a switch statement to match and print the word for that number.
+
+4.End the program.
 
 # PROGRAM:
+```
+#include<stdio.h>
+int main(){
+    int num;
+    scanf("%d",&num);
+        switch(num){
+            case 10:printf("TEN\n");break;
+            case 11:printf("ELEVEN\n");break;
+            case 12:printf("TWELVE\n");break;
+            case 13:printf("THIRTEEN\n");break;
+            case 14:printf("FOURTEEN\n");break;
+            default:printf("... Plz Enter 10 to 14 Numbers Only...");
+            
+            
+        }
+    }
 
+```
 # OUTPUT:
 
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/0233d7fb-937d-42ba-8110-586f26d9d394)
 
 
 # RESULT:
@@ -64,65 +75,84 @@ Thus the program to read A values and check whether A is positive number or not 
  
  
  
-
-
 # EX-03- Operators-Expressions
+
 ## AIM:
-Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
+Debug the given C program to find the number of years based on principle amount, rate of interest & simple interest.
 
 ## ALGORITHM:
-1.	Declare variables to store the two fraction numbers and the result.
-2.	Use the printf function to prompt the user to enter the first fraction number (numerator and denominator separately).
-3.	Use the scanf function to read the numerator and denominator of the first fraction.
-4.	Repeat steps 2 and 3 to get the second fraction from the user.
-5.	Calculate the decimal values of both fractions by dividing the numerators by the denominators.
-6.	Use the conditional (ternary) operator to compare the decimal values and store the minimum value in the result variable.
-7.	Print the minimum value.
+1.Start the program and declare variables for principal (P), rate (R), interest (SI), and time (T).
+2.Input values for principal, rate, and simple interest.
+3.Use the formula T = SI / (P * R / 100) to calculate the number of years.
+4.Display the result and end the program.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main()
+{
+    float principle, year, rate, SI;
+      scanf("%f", &principle);
+      scanf("%f", &rate);
+      scanf("%f", &SI);
+      year= SI / (principle * rate/100);
+      printf("No.of.Year is = %.2f", year);
+      return 0;
+}
+```
 ## OUTPUT:
 
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/70c4e130-47b4-44fd-a2a7-e6f15f2494ba)
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
 
 
 
-
 # EX-04- Using Conditional Statements
 
 ## AIM:
-Write a C program to check whether the input value is equal to 1 using simple if statement
+Write a C program to count the number of digits without using a loop
 
 ## ALGORITHM:
-1.	Declare a variable to store the input value.
-2.	Use the scanf function to read the input value from the user.
-3.	Use an if statement to check if the input value is equal to 1.
-4.	If the condition in the if statement is true, print a message indicating that the input value is equal to 1.
-5.	Otherwise, print a message indicating that it's not equal to 1.
-6.	End the program.
+1.Start the program and define a recursive function to count digits.
+
+2.In the function, check if the number is 0; if so, return 0.
+
+3.Otherwise, return 1 + recursive call with number / 10.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int countDigits(int num) {
+    // Base case: if num is 0, return 0
+    if (num == 0) {
+        return 0;
+    }
+    // Recursive case: count this digit and call the function with num / 10
+    return 1 + countDigits(num / 10);
+}
+
+int main() {
+    int number;
+
+    scanf("%d", &number);
+    
+    // Handle the case where the number is 0
+    if (number == 0) {
+        printf("Number: 1\n");
+    } else {
+        printf("Number:%d\n", countDigits(number < 0 ? -number : number));
+    }
+    
+    return 0;
+}
+```
 
 ## OUTPUT:
 
-
-
-
-
-
-
-
-
-	
+![image](https://github.com/user-attachments/assets/050a5b16-840d-4387-b638-dc66eeafc223)
 
 ## RESULT:
 Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
@@ -131,24 +161,40 @@ Thus the program to check whether the input value is equal to 1 using simple if 
 
 # EX-05- Calculating Total, Percentage, And Division Using Conditional Statements 
 ## AIM:
-To write a C program that reads marks of three subjects, calculates the total and percentage, and then determines the division (First, Second, Pass, or Fail) based on the percentage and minimum marks criteria.
+Write a C program to check whether the given number is  odd number and it is greater than 25 or not using nested if.
 ## ALGORITHM:
-1.	Start
-2.	Declare integer variables m1, m2, m3 for marks, and float variables tot, per.
-3.	Input the marks for three subjects.
-4.	Calculate total marks: tot = m1 + m2 + m3
-5.	Calculate percentage: per = tot / 3
-6.	Display total and percentage.
-7.	Check if all marks are greater than or equal to 40:
-8.	If yes:
-a.	If percentage >= 60: Print “Division = First”
-b.	Else if percentage >= 48: Print “Division = Second”
-c.	Else if percentage >= 36: Print “Division = Pass”
-9.	Else: Print “Division = Fail”
-10.	End
-## PROGRAM:
+1.Start the program and input a number.
 
+2.Check if the number is odd using if (num % 2 != 0).
+
+3.Inside that, use another if to check if it is greater than 25.
+
+4.Print appropriate messages based on conditions and end the program.
+
+## PROGRAM:
+```
+#include <stdio.h>
+int main(){
+    int a;
+    scanf("%d",&a);
+    
+    if(a%2!=0){
+        if(a>=25){
+            printf("The number is odd");
+            printf("\nThe number is greater than or equal to 25");
+        }
+        else{
+            printf("The number is odd");
+            printf("\nThe number is not greater than or equalto 25");
+        }
+    }
+    else{
+        printf("The number is NOT an odd number");
+    }
+}
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/b6a82338-68d2-4dfd-ad30-b1b952920cb6)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
